@@ -1,0 +1,93 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  background-color: rgb(34, 35, 46);
+}
+.container{
+  width: 45%;
+  height: 100vh;
+  margin: auto;
+  background-color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+.container img{
+  margin-top: 30px;
+  margin-left: 25px;
+  height: 55px;
+  width: auto;
+  float: left;
+}
+
+.container .h1{
+  margin-top: 45px;
+  margin-left: 25px;
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  float: left;
+}
+
+.container .reg{
+  clear: both;
+  margin-left: 25px;
+  padding-top: 50px;
+}
+
+form fieldset .name{
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 25px 20px 25px;
+}
+
+form fieldset .name input[type="text"]{
+  margin-top: 10px;
+  width: 200px;
+  height: 30px;
+}
+
+form fieldset .name input[type="date"]{
+  margin-top: 10px;
+  width: 200px;
+  height: 30px;
+}
+form fieldset .contain3 input[type="radio"]{
+  margin-top: 10px;
+  margin-right: 5px;
+}
+
+form fieldset .contain3 input[type="email"]{
+  margin-top: 10px;
+  width: 200px;
+  height: 30px;
+}
+
+form fieldset .contain3{
+  display: flex;
+  margin: 30px 0px 20px 25px;
+}
+
+form fieldset .contain3 .email{
+  margin-left: 33px;
+}
+
+
+form fieldset .contain3 .email input[type="email"]{
+  margin-top: 10px;
+  width: 410px;
+  height: 30px;
+}
+
+form fieldset .name input[type="number"]{
+  margin-top: 10px;
+  width: 200px;
+  height: 30px;
+}
+
+.container form fieldset label{
+  font-weight: bold;
+}

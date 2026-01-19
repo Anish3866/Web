@@ -1,0 +1,8 @@
+table{
+  border-collapse: collapse;
+}
+
+table tr td{
+  border: 3px solid rgba(59, 56, 56, 0.733);
+  text-align: center;
+}

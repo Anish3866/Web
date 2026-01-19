@@ -1,0 +1,31 @@
+body{
+  background-image: linear-gradient(blue,cyan, green,purple);
+  background-color: rgba(0, 0, 0, 0.5);
+
+}
+
+h1{
+  text-align: center;
+  color: cyan;
+  font-family: Arial, sans-serif;
+}
+
+.container{
+  width: 80%;
+  height: 700px;
+  margin: auto;
+  padding: 20px;
+  border: 2px solid #4CAF50;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.container .ref{
+  justify-content: space-around;
+  display: flex;
+}
+
+.container .ref img{
+  margin-bottom: 25px;
+  border-radius: 10px;
+}

@@ -1,0 +1,87 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  margin-left: 20px;
+  color: red;
+}
+
+form fieldset{
+  border: 2px solid #000;
+  padding: 20px;
+  margin: 20px;
+  width: 50%;
+}
+
+form fieldset legend{
+  text-align: center;
+}
+
+form fieldset .form-label{
+  display: flex;
+  margin-bottom: 10px;
+  border: 2px solid #000;
+  padding: 5px;
+}
+
+form fieldset .form-label label{
+  width: 100px;
+  display: inline;
+}
+
+form fieldset .form-label input[type="text"],
+form fieldset .form-label input[type="number"]{
+  height: 30px;
+  width: 85%;
+  border: 2px solid orange;
+}
+
+form fieldset .form-label span{
+  font-size: 30px;
+}
+form fieldset .form-label input[type="radio"]{
+  height: 30px;
+  width: 50px;
+}
+
+form fieldset .form-label select{
+  height: 35px;
+  width: 85%;
+  border: 2px solid orange;
+}
+
+form fieldset .form-label textarea{
+  border: 2px solid orange;
+  width: 85%;
+}
+
+form fieldset .form-label label[for="tac"]{
+  width: auto;
+  margin-left: 10px;
+}
+
+form fieldset input[type="submit"]{
+  height: 30px;
+  width: 70px;
+  background-color: #2d7be2;
+  border: none;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+form fieldset input[type="reset"]{
+  height: 30px;
+  width: auto;
+  padding: 0 5px;
+  background-color: rgb(226, 90, 142);
+  border: none;
+  color: white;
+  font-size: 15px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+

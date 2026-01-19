@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="Q18.css">
+</head>
+
+<body>
+  <h1>Registration Form</h1>
+  <form>
+    <fieldset>
+      <legend>Personal Details</legend>
+      <div class="form-label">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <br>
+      <div class="form-label">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address">
+      </div>
+      <br>
+      <div class="form-label">
+        <label for="phone">Phone</label>
+        <input type="number" id="phone" name="phone">
+      </div>
+      <div class="form-label">
+        <label for="gender">Gender</label>
+        <input type="radio" value="male" name="gender"><span>Male</span>
+        <input type="radio" value="female" name="gender"><span>Female</span>
+      </div>
+      <div class="form-label">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="">Select Country</option>
+          <option value="977">Nepal</option>
+          <option value="01">China</option>
+        </select>
+      </div>
+      <div class="form-label">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" cols="30"></textarea>
+      </div>
+      <div class="form-label">
+        <label for="image">Image</label>
+        <input type="file" id="image" name="image">
+      </div>
+      <div class="form-label">
+        <input type="checkbox" id="tac" name="tac">
+        <label for="tac">I accept Terms and Conditions</label>
+      </div>
+      <div class="form-label">
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+      </div>
+    </fieldset>
+  </form>
+</body>
+
+</html>

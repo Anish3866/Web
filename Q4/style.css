@@ -1,0 +1,49 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: grey;
+}
+
+div .container{
+  display:flex;
+  width:41%;
+  margin: auto;
+  justify-content: space-around;
+  margin-top: 10px;
+}
+
+div .disc{
+  height: 180px;
+  width: 180px;
+  background-color: white;
+  padding: 30px;
+}
+
+div .square{
+  height: 180px;
+  width: 180px;
+  background-color: white;
+  padding: 30px;
+}
+
+div .container .disc .squ{
+  list-style-type: decimal;
+}
+
+div .circle{
+  height: 180px;
+  width: 180px;
+  background-color: white;
+  padding: 30px;
+}
+
+div .container h1{
+  font-size: 18px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
