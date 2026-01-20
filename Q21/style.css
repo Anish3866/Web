@@ -5,15 +5,20 @@
 }
 body{
   background-color: rgb(34, 35, 46);
+  font-family: 'Arial', sans-serif;
 }
 .container{
   width: 45%;
-  height: 100vh;
+  height: 110vh;
   margin: auto;
   background-color: white;
   margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 10px;
+}
+
+.container form fieldset span{
+  color: red;
 }
 
 .container img{
@@ -44,6 +49,12 @@ form fieldset .name{
   margin: 30px 25px 20px 25px;
 }
 
+form fieldset .name input{
+  border: 1px solid rgb(158, 156, 156);
+  border-radius: 2px;
+  padding: 10px;
+}
+
 form fieldset .name input[type="text"]{
   margin-top: 10px;
   width: 200px;
@@ -60,19 +71,13 @@ form fieldset .contain3 input[type="radio"]{
   margin-right: 5px;
 }
 
-form fieldset .contain3 input[type="email"]{
-  margin-top: 10px;
-  width: 200px;
-  height: 30px;
-}
-
 form fieldset .contain3{
   display: flex;
   margin: 30px 0px 20px 25px;
 }
 
 form fieldset .contain3 .email{
-  margin-left: 33px;
+  margin-left: 20px;
 }
 
 
@@ -90,4 +95,38 @@ form fieldset .name input[type="number"]{
 
 .container form fieldset label{
   font-weight: bold;
+}
+
+form fieldset .buttons{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+
+form fieldset .buttons button{
+  margin-left: 25px;
+  padding: 8px 10px 8px 10px;
+  font-size: large;
+  color: rgb(0, 102, 255);
+  border: 1px solid rgb(0, 102, 255);
+  cursor: pointer;
+}
+
+form fieldset .buttons button:hover{
+  background-color: rgb(0, 102, 255);
+  color: white;
+}
+
+form fieldset .buttons input[type="submit"]{
+  margin-right: 25px;
+  padding: 0 15px 0 15px;
+  font-size: large;
+  background-color: rgb(0, 102, 255);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+form fieldset .buttons input[type="submit"]:hover{
+  background-color: rgb(1, 83, 207);
 }
