@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice</title>
+    <link rel="stylesheet" href="Q27.css">
+</head>
+<body>
+    <div class="invoice">
+        <div class="top-bar"></div>
+        <div class="header-section">
+            <div class="header-left">
+                <div class="logo">LOGO</div>
+                <div class="company-details">
+                    <p class="company-name">&lt;Your Company Name&gt;</p>
+                    <p>&lt;Your address&gt;</p>
+                    <p>&lt;Your contact details&gt;</p>
+                </div>
+            </div>
+            <div class="header-right">
+                <h1 class="invoice-title">INVOICE</h1>
+                <div class="info-group">
+                    <div class="info-label">DATE</div>
+                    <div class="info-line"></div>
+                </div>
+                <div class="info-group">
+                    <div class="info-label">INVOICE NO.</div>
+                    <div class="info-line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="payment-terms">
+                &lt;Payment terms (due on receipt, due in X days)&gt;
+            </div>
+
+            <div class="billing-section">
+                <div class="bill-to">
+                    <h3>BILL TO</h3>
+                    <div class="h-line"></div>
+                    <p>&lt;Contact Name&gt;</p>
+                    <p>&lt;Client Company Name&gt;</p>
+                    <p>&lt;Address&gt;</p>
+                    <p>&lt;Phone&gt;</p>
+                    <p>&lt;Email&gt;</p>
+                </div>
+                <div class="ship-to">
+                    <h3>SHIP TO</h3>
+                    <div class="h-line"></div>
+                    <p>&lt;Name / Dept&gt;</p>
+                    <p>&lt;Client Company Name&gt;</p>
+                    <p>&lt;Address&gt;</p>
+                    <p>&lt;Phone&gt;</p>
+                </div>
+            </div>
+
+            <table class="items-table">
+                <thead>
+                    <tr>
+                        <th class="col-desc">DESCRIPTION</th>
+                        <th class="col-qty">QTY</th>
+                        <th class="col-price">UNIT PRICE</th>
+                        <th class="col-total">TOTAL</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td></td><td></td><td></td><td class="amount">0.00</td></tr>
+                    <tr><td></td><td></td><td></td><td class="amount">0.00</td></tr>
+                    <tr><td></td><td></td><td></td><td class="amount">0.00</td></tr>
+                    <tr><td></td><td></td><td></td><td class="amount">0.00</td></tr>
+                    <tr><td></td><td></td><td></td><td class="amount">0.00</td></tr>
+                    <tr><td></td><td></td><td></td><td class="amount">0.00</td></tr>
+                    <tr><td></td><td></td><td></td><td class="amount">0.00</td></tr>
+                    <tr><td></td><td></td><td></td><td class="amount">0.00</td></tr>
+                    <tr><td></td><td></td><td></td><td class="amount">0.00</td></tr>
+                    <tr><td></td><td></td><td></td><td class="amount">0.00</td></tr>
+                    <tr><td></td><td></td><td></td><td class="amount">0.00</td></tr>
+                </tbody>
+            </table>
+
+            <div class="invoice-footer">
+                <div class="remarks">
+                    <p class="remarks-label">Remarks / Payment Instructions:</p>
+                </div>
+                <div class="totals-section">
+                    <div class="total-row">
+                        <div class="total-label">SUBTOTAL</div>
+                        <div class="total-value">0.00</div>
+                    </div>
+                    <div class="total-row">
+                        <div class="total-label">DISCOUNT</div>
+                        <div class="total-value">0.00</div>
+                    </div>
+                    <div class="total-row">
+                        <div class="total-label">SUBTOTAL LESS DISCOUNT</div>
+                        <div class="total-value">0.00</div>
+                    </div>
+                    <div class="total-row">
+                        <div class="total-label">TAX RATE</div>
+                        <div class="total-value">0.00%</div>
+                    </div>
+                    <div class="total-row">
+                        <div class="total-label">TOTAL TAX</div>
+                        <div class="total-value">0.00</div>
+                    </div>
+                    <div class="total-row bottom-row">
+                        <div class="total-label">SHIPPING/HANDLING</div>
+                        <div class="total-value">0.00</div>
+                    </div>
+
+                    <div class="totals-divider"></div>
+
+                    <div class="balance-due-box">
+                        <div class="balance-label">Balance Due</div>
+                        <div class="balance-amount-box">
+                            <span class="currency">$</span>
+                            <span class="amount">-</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-bar-container">
+            <div class="bottom-bar"></div>
+        </div>
+    </div>
+</body>
+</html>

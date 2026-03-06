@@ -1,49 +1,77 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-body{
-  background-color: grey;
+body {
+  background-color: #f1f5f6;
+  /* Light grayish-blue background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 40px;
 }
 
-div .container{
-  display:flex;
-  width:41%;
-  margin: auto;
-  justify-content: space-around;
-  margin-top: 10px;
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 900px;
 }
 
-div .disc{
-  height: 180px;
-  width: 180px;
+.card {
   background-color: white;
   padding: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  /* Soft shadow */
+  display: flex;
+  flex-direction: column;
+  min-height: 200px;
 }
 
-div .square{
-  height: 180px;
-  width: 180px;
-  background-color: white;
-  padding: 30px;
+.card h2 {
+  font-size: 16px;
+  color: #1a2942;
+  /* Dark navy color for heading */
+  text-align: center;
+  margin-bottom: 25px;
 }
 
-div .container .disc .squ{
+.card ul,
+.card ol {
+  color: #55606e;
+  /* Gray color for list items */
+  font-size: 15px;
+  line-height: 1.8;
+  padding-left: 20px;
+  /* Indent for bullets/numbers */
+}
+
+/* Specific List Styles */
+.style-disc {
+  list-style-type: disc;
+}
+
+.style-square {
+  list-style-type: square;
+}
+
+.style-circle {
+  list-style-type: circle;
+}
+
+.style-decimal {
   list-style-type: decimal;
 }
 
-div .circle{
-  height: 180px;
-  width: 180px;
-  background-color: white;
-  padding: 30px;
+.style-decimal-leading-zero {
+  list-style-type: decimal-leading-zero;
 }
 
-div .container h1{
-  font-size: 18px;
-  text-align: center;
-  margin-bottom: 20px;
+.style-lower-alpha {
+  list-style-type: lower-alpha;
 }
-
