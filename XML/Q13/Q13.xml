@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hospital [
+    <!ELEMENT hospital (patient+)>
+    <!ELEMENT patient (name, patientNumber, doctorName, disease+, consultationCharge, labTests)>
+    <!ELEMENT name (first, middle?, last)>
+    <!ELEMENT first (#PCDATA)>
+    <!ELEMENT middle (#PCDATA)>
+    <!ELEMENT last (#PCDATA)>
+    <!ELEMENT patientNumber (#PCDATA)>
+    <!ELEMENT doctorName (#PCDATA)>
+    <!ELEMENT disease (#PCDATA)>
+    <!ELEMENT consultationCharge (#PCDATA)>
+    <!ELEMENT labTests (test+)>
+    <!ELEMENT test (#PCDATA)>
+]>
+<hospital xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Q13.xsd">
+    <patient>
+        <name>
+            <first>Aayush</first>
+            <middle>Bahadur</middle>
+            <last>Gyawali</last>
+        </name>
+        <patientNumber>12345</patientNumber>
+        <doctorName>Dr. Anish Gautam</doctorName>
+        <disease>Fever</disease>
+        <disease>Common Cold</disease>
+        <consultationCharge>1500</consultationCharge>
+        <labTests>
+            <test>Blood Pressure Check</test>
+            <test>Sugar Level Analysis</test>
+            <test>Urine Test</test>
+        </labTests>
+    </patient>
+</hospital>

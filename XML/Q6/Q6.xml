@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<school xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Q6.xsd">
+    <schoolId>SCH3866</schoolId>
+    <schoolName>School of IT and Engineering</schoolName>
+    <location>Kathmandu</location>
+    <location>Pokhara</location>
+    
+    <staffList>
+        <staff>
+            <staffId>S101</staffId>
+            <staffName>Anish Gautam</staffName>
+            <title>Professor</title>
+            <category>academic</category>
+            <address>
+                <street>Baneshwor Heights</street>
+                <suburb>Baneshwor</suburb>
+                <postcode>44600</postcode>
+            </address>
+        </staff>
+        <staff>
+            <staffId>S102</staffId>
+            <staffName>Aayush Gyawali</staffName>
+            <title xsi:nil="true"></title>
+            <category>general</category>
+            <address>
+                <street>Shankhamul Road</street>
+                <suburb>Koteshwor</suburb>
+                <postcode>44601</postcode>
+            </address>
+            <address>
+                <street>Butwal Bypass</street>
+                <suburb>Butwal</suburb>
+                <postcode>32907</postcode>
+            </address>
+        </staff>
+        <staff>
+            <staffId>S103</staffId>
+            <staffName>Mavis Pahari</staffName>
+            <title>Senior Technician</title>
+            <category>technical</category>
+            <address>
+                <street>Jawalakhel Square</street>
+                <suburb>Lalitpur</suburb>
+                <postcode>44700</postcode>
+            </address>
+        </staff>
+    </staffList>
+    
+    <subjectList>
+        <subject>
+            <subjectCode>IT101</subjectCode>
+            <name>XML Basics</name>
+            <description>Introduction to XML, DTD, and Schema.</description>
+            <capacity>60</capacity>
+            <instructorStaffId>S101</instructorStaffId>
+            <instructorStaffId>S103</instructorStaffId>
+        </subject>
+        <subject>
+            <subjectCode>ENG202</subjectCode>
+            <name>Advanced Web Development</name>
+            <description>Developing scalable web applications.</description>
+            <capacity>150</capacity>
+            <instructorStaffId>S101</instructorStaffId>
+        </subject>
+        <subject>
+            <subjectCode>TECH301</subjectCode>
+            <name>Network Security</name>
+            <description>Security protocols and implementations.</description>
+            <capacity>40</capacity>
+            <instructorStaffId>S103</instructorStaffId>
+        </subject>
+    </subjectList>
+</school>

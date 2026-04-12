@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="priceType">
+    <xs:simpleContent>
+      <xs:extension base="xs:decimal">
+        <xs:attribute name="currency" use="required">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="NPR"/>
+              <xs:enumeration value="INR"/>
+              <xs:enumeration value="USD"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:simpleType name="priceLimit">
+    <xs:restriction base="xs:decimal">
+      <xs:maxInclusive value="600"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="authorType">
+    <xs:sequence>
+      <xs:element name="first_name" type="xs:string"/>
+      <xs:element name="middle_name" type="xs:string" minOccurs="0"/>
+      <xs:element name="last_name" type="xs:string"/>
+    </xs:sequence>
+    <xs:attribute name="title" default="ms">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="mr"/>
+          <xs:enumeration value="ms"/>
+          <xs:enumeration value="mrs"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="phone" type="xs:string" use="required"/>
+    <xs:attribute name="email" type="xs:string" use="required"/>
+  </xs:complexType>
+
+  <xs:complexType name="bookType">
+    <xs:sequence>
+      <xs:element name="title" type="xs:string"/>
+      <xs:element name="author" type="authorType" maxOccurs="unbounded"/>
+      <xs:element name="page_no" type="xs:positiveInteger"/>
+      <xs:element name="price">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="priceLimit">
+              <xs:attribute name="currency" use="required">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="NPR"/>
+                    <xs:enumeration value="INR"/>
+                    <xs:enumeration value="USD"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:attribute>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="ISBN" type="xs:ID" use="required"/>
+  </xs:complexType>
+
+  <xs:element name="library">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="book" type="bookType" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:unique name="uniqueISBN">
+      <xs:selector xpath="book"/>
+      <xs:field xpath="@ISBN"/>
+    </xs:unique>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="addressType">
+    <xs:sequence>
+      <xs:element name="street" type="xs:string"/>
+      <xs:element name="suburb" type="xs:string"/>
+      <xs:element name="postcode" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="staffType">
+    <xs:sequence>
+      <xs:element name="staffId" type="xs:string"/>
+      <xs:element name="staffName" type="xs:string"/>
+      <xs:element name="title" type="xs:string" minOccurs="1" nillable="true"/>
+      <xs:element name="category">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:enumeration value="academic"/>
+            <xs:enumeration value="general"/>
+            <xs:enumeration value="technical"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="address" type="addressType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="subjectType">
+    <xs:sequence>
+      <xs:element name="subjectCode" type="xs:string"/>
+      <xs:element name="name" type="xs:string"/>
+      <xs:element name="description" type="xs:string"/>
+      <xs:element name="capacity">
+        <xs:simpleType>
+          <xs:restriction base="xs:integer">
+            <xs:minInclusive value="6"/>
+            <xs:maxInclusive value="400"/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="instructorStaffId" type="xs:string" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="school">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="schoolId" type="xs:string"/>
+        <xs:element name="schoolName" type="xs:string"/>
+        <xs:element name="location" type="xs:string" maxOccurs="unbounded"/>
+        <xs:element name="staffList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="staff" type="staffType" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="subjectList">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="subject" type="subjectType" maxOccurs="unbounded"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:key name="staffKey">
+      <xs:selector xpath="staffList/staff"/>
+      <xs:field xpath="staffId"/>
+    </xs:key>
+
+    <xs:keyref name="taughtByStaffRef" refer="staffKey">
+      <xs:selector xpath="subjectList/subject/instructorStaffId"/>
+      <xs:field xpath="."/>
+    </xs:keyref>
+
+    <xs:unique name="schoolUniqueId">
+      <xs:selector xpath="."/>
+      <xs:field xpath="schoolId"/>
+    </xs:unique>
+
+    <xs:unique name="subjectUniqueCode">
+      <xs:selector xpath="subjectList/subject"/>
+      <xs:field xpath="subjectCode"/>
+    </xs:unique>
+
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<library xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Q4.xsd">
+    <book ISBN="B3866">
+        <title>C-Programming</title>
+        <author title="mr" phone="9876543210" email="aayushgyawali123@gmail.com">
+            <first_name>Aayush</first_name>
+            <middle_name>Bahadur</middle_name>
+            <last_name>Gyawali</last_name>
+        </author>
+        <author title="mr" phone="9841000000" email="anish206195@gmail.com">
+            <first_name>Anish</first_name>
+            <last_name>Gautam</last_name>
+        </author>
+        <page_no>450</page_no>
+        <price currency="NPR">550</price>
+    </book>
+    
+    <book ISBN="B3867">
+        <title>Web Technology</title>
+        <author phone="9769234561" email="mavispahari123@gmail.com">
+            <first_name>Mavis</first_name>
+            <last_name>Pahari</last_name>
+        </author>
+        <page_no>300</page_no>
+        <price currency="NPR">600</price>
+    </book>
+</library>

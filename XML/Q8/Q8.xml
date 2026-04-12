@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE oceans [
+    <!ELEMENT oceans (header, ocean+)>
+    <!ELEMENT header (#PCDATA)>
+    <!ELEMENT ocean (name, area, depth)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT area (#PCDATA)>
+    <!ELEMENT depth (#PCDATA)>
+]>
+<?xml-stylesheet type="text/css" href="Q8.css"?>
+<oceans>
+    <header>Oceans</header>
+    <ocean>
+        <name>Arctic</name>
+        <area>13,000 million km²</area>
+        <depth>1,200 m</depth>
+    </ocean>
+    <ocean>
+        <name>Atlantic</name>
+        <area>87,000 million km²</area>
+        <depth>3,900 m</depth>
+    </ocean>
+    <ocean>
+        <name>Pacific</name>
+        <area>180,000 million km²</area>
+        <depth>4,000 m</depth>
+    </ocean>
+    <ocean>
+        <name>Indian</name>
+        <area>75,000 million km²</area>
+        <depth>3,900 m</depth>
+    </ocean>
+    <ocean>
+        <name>Southern</name>
+        <area>20,000 million km²</area>
+        <depth>4,500 m</depth>
+    </ocean>
+</oceans>

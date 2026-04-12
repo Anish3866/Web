@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="phoneTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="work"/>
+      <xs:enumeration value="home"/>
+      <xs:enumeration value="personal"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="currencyTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="npr"/>
+      <xs:enumeration value="inr"/>
+      <xs:enumeration value="usd"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="dateTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ad"/>
+      <xs:enumeration value="bs"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="sales">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="salesman" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="name">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="first" type="xs:string"/>
+                    <xs:element name="middle" type="xs:string" minOccurs="0"/>
+                    <xs:element name="last" type="xs:string"/>
+                  </xs:sequence>
+                  <xs:attribute name="title" type="xs:string"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="phone">
+                <xs:complexType>
+                  <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                      <xs:attribute name="type" type="phoneTypeEnum" default="personal"/>
+                    </xs:extension>
+                  </xs:simpleContent>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="area" type="xs:string"/>
+              <xs:element name="records">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="record" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="product">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="sku" type="xs:string"/>
+                                <xs:element name="product_name" type="xs:string"/>
+                              </xs:sequence>
+                              <xs:attribute name="productid" type="xs:string" use="required"/>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="quantity" type="xs:integer"/>
+                          <xs:element name="price">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:decimal">
+                                  <xs:attribute name="currency" type="currencyTypeEnum" default="npr"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element name="date">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                <xs:extension base="xs:string">
+                                  <xs:attribute name="type" type="dateTypeEnum" use="required"/>
+                                </xs:extension>
+                              </xs:simpleContent>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

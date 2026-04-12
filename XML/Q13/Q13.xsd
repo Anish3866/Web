@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="patientNumberType">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="\d{5}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="chargeType">
+    <xs:restriction base="xs:integer">
+      <xs:minInclusive value="500"/>
+      <xs:maxInclusive value="5000"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="patientType">
+    <xs:sequence>
+      <xs:element name="name">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="first" type="xs:string"/>
+            <xs:element name="middle" type="xs:string" minOccurs="0"/>
+            <xs:element name="last" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="patientNumber" type="patientNumberType"/>
+      <xs:element name="doctorName" type="xs:string"/>
+      <xs:element name="disease" type="xs:string" maxOccurs="unbounded"/>
+      <xs:element name="consultationCharge" type="chargeType"/>
+      <xs:element name="labTests">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="test" type="xs:string" maxOccurs="unbounded"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="hospital">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="patient" type="patientType" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

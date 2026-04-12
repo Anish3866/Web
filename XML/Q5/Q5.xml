@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Q5.xsd">
+    <student rollno="08">
+        <name>
+            <first_name>Anish</first_name>
+            <last_name>Gautam</last_name>
+        </name>
+        <email>anish206195@gmail.com</email>
+        <phone>9841000000</phone>
+        <address type="permanent">Baneshwor, Kathmandu</address>
+        <address type="temporary">Kirtipur, Kathmandu</address>
+        <DOB type="AD">2005-02-15</DOB>
+    </student>
+    
+    <student rollno="03">
+        <name>
+            <first_name>Aayush</first_name>
+            <middle_name>Bahadur</middle_name>
+            <last_name>Gyawali</last_name>
+        </name>
+        <email>aayush.gyawali123@gmail.com</email>
+        <phone>9745678901</phone>
+        <address type="permanent">Butwal, Rupandehi</address>
+        <DOB type="BS">2061-10-20</DOB>
+    </student>
+    
+    <student rollno="21">
+        <name>
+          <first_name>Mavis</first_name>
+          <last_name>Pahari</last_name>
+        </name>
+        <email>mavispahari123@gmail.com</email>
+        <phone>9876543210</phone>
+        <address type="permanent">Lalitpur, Nepal</address>
+        <DOB type="AD">2004-12-05</DOB>
+    </student>
+</students>

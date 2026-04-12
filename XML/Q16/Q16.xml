@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE products [
+    <!ELEMENT products (product+)>
+    <!ELEMENT product (productname, category, price, quantity)>
+    <!ELEMENT productname (#PCDATA)>
+    <!ELEMENT category (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>
+    <!ELEMENT quantity (#PCDATA)>
+]>
+<?xml-stylesheet type="text/xsl" href="Q16.xsl"?>
+<products>
+    <product>
+        <productname>Laptop</productname>
+        <category>Electronics</category>
+        <price>1200</price>
+        <quantity>15</quantity>
+    </product>
+    <product>
+        <productname>Mouse</productname>
+        <category>Electronics</category>
+        <price>25</price>
+        <quantity>5</quantity>
+    </product>
+    <product>
+        <productname>Keyboard</productname>
+        <category>Electronics</category>
+        <price>45</price>
+        <quantity>20</quantity>
+    </product>
+    <product>
+        <productname>Desk</productname>
+        <category>Furniture</category>
+        <price>250</price>
+        <quantity>12</quantity>
+    </product>
+    <product>
+        <productname>Chair</productname>
+        <category>Furniture</category>
+        <price>150</price>
+        <quantity>8</quantity>
+    </product>
+    <product>
+        <productname>Table</productname>
+        <category>Furniture</category>
+        <price>400</price>
+        <quantity>10</quantity>
+    </product>
+</products>

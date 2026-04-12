@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE TU [
+    <!ELEMENT TU (Employee+)>
+    <!ELEMENT Employee (Post, Salary, Gender, UserName, Password)>
+    <!ELEMENT Post (#PCDATA)>
+    <!ELEMENT Salary (#PCDATA)>
+    <!ELEMENT Gender (#PCDATA)>
+    <!ELEMENT UserName (#PCDATA)>
+    <!ELEMENT Password (#PCDATA)>
+]>
+<TU xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Q15.xsd">
+    <Employee>
+        <Post>Manager</Post>
+        <Salary>45000</Salary>
+        <Gender>male</Gender>
+        <UserName>anish.gautam</UserName>
+        <Password>P4ssword</Password>
+    </Employee>
+    <Employee>
+        <Post>Lecturer</Post>
+        <Salary>38000</Salary>
+        <Gender>female</Gender>
+        <UserName>aayush.gya</UserName>
+        <Password>A1234567</Password>
+    </Employee>
+</TU>

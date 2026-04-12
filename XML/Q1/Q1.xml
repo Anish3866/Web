@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<bookstore>
+    <book>
+        <title>The Great Gatsby</title>
+        <author>F. Scott Fitzgerald</author>
+        <isbn>978-0743273565</isbn>
+        <publisher>Scribner</publisher>
+        <edition>Standard Edition</edition>
+        <price>Rs.560</price>
+    </book>
+    <book>
+        <title>1984</title>
+        <author>George Orwell</author>
+        <isbn>978-0451524935</isbn>
+        <publisher>Signet Classics</publisher>
+        <edition>Reissue Edition</edition>
+        <price>Rs.1000</price>
+    </book>
+    <book>
+        <title>To Kill a Mockingbird</title>
+        <author>Harper Lee</author>
+        <isbn>978-0061120084</isbn>
+        <publisher>Harper Perennial Modern Classics</publisher>
+        <edition>40th Anniversary Edition</edition>
+        <price>Rs.1425</price>
+    </book>
+</bookstore>

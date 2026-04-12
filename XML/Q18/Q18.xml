@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="Q18.xsl"?>
+
+<!DOCTYPE students [
+    <!ELEMENT students (student+)>
+    <!ELEMENT student (name, reg_no, symbol_number, marks)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT reg_no (#PCDATA)>
+    <!ELEMENT symbol_number (#PCDATA)>
+    <!ELEMENT marks (web, sad, dsa, java, stat)>
+    <!ELEMENT web (#PCDATA)>
+    <!ELEMENT sad (#PCDATA)>
+    <!ELEMENT dsa (#PCDATA)>
+    <!ELEMENT java (#PCDATA)>
+    <!ELEMENT stat (#PCDATA)>
+]>
+<students>
+    <student>
+        <name>Ram Thapa</name>
+        <reg_no>545454</reg_no>
+        <symbol_number>87878</symbol_number>
+        <marks>
+            <web>54</web>
+            <sad>54</sad>
+            <dsa>54</dsa>
+            <java>54</java>
+            <stat>54</stat>
+        </marks>
+    </student>
+
+    <student>
+        <name>Rabina Giri</name>
+        <reg_no>21221</reg_no>
+        <symbol_number>7777</symbol_number>
+        <marks>
+            <web>65</web>
+            <sad>78</sad>
+            <dsa>78</dsa>
+            <java>98</java>
+            <stat>24</stat>
+        </marks>
+    </student>
+</students>

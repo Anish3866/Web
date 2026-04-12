@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<playlist>
+    <song>
+        <name>Blinding Lights</name>
+        <singer>The Weeknd</singer>
+        <composed_by>Max Martin, Oscar Holter, Abel Tesfaye</composed_by>
+        <length>3:20</length>
+    </song>
+    <song>
+        <name>Bohemian Rhapsody</name>
+        <singer>Queen</singer>
+        <composed_by>Freddie Mercury</composed_by>
+        <length>5:55</length>
+    </song>
+    <song>
+        <name>Shape of You</name>
+        <singer>Ed Sheeran</singer>
+        <composed_by>Ed Sheeran, Steve Mac, Johnny McDaid</composed_by>
+        <length>3:53</length>
+    </song>
+    <song>
+        <name>Someone Like You</name>
+        <singer>Adele</singer>
+        <composed_by>Adele Adkins, Dan Wilson</composed_by>
+        <length>4:45</length>
+    </song>
+</playlist>

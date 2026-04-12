@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+    <!ELEMENT root (header, categories)>
+    <!ELEMENT header (#PCDATA)>
+    <!ELEMENT categories (category+)>
+    <!ELEMENT category (item+)>
+    <!ATTLIST category name CDATA #REQUIRED>
+    <!ELEMENT item (#PCDATA)>
+]>
+<?xml-stylesheet type="text/xsl" href="Q9.xsl"?>
+<root>
+    <header>Hello Everyone! Welcome to XML to CSS</header>
+    <categories>
+        <category name="Algo">
+            <item>Greedy Algo</item>
+            <item>Randomised Algo</item>
+            <item>Searching Algo</item>
+            <item>Sorting Algo</item>
+        </category>
+        <category name="Data Structures">
+            <item>Array</item>
+            <item>Stack</item>
+            <item>Queue</item>
+            <item>Linked List</item>
+        </category>
+        <category name="Web Technology">
+            <item>HTML</item>
+            <item>CSS</item>
+            <item>Java Script</item>
+            <item>Php</item>
+        </category>
+        <category name="Languages">
+            <item>C/C++</item>
+            <item>Java</item>
+            <item>Python</item>
+            <item>Ruby</item>
+        </category>
+        <category name="DBMS">
+            <item>Basics</item>
+            <item>ER Diagram</item>
+            <item>Normalization</item>
+            <item>Transaction Concepts</item>
+        </category>
+    </categories>
+</root>

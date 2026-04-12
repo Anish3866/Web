@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sales [
+    <!ELEMENT sales (salesman+)>
+    <!ELEMENT salesman (name, phone, area, records)>
+    <!ELEMENT name (first, middle?, last)>
+    <!ATTLIST name title CDATA #REQUIRED>
+    <!ELEMENT first (#PCDATA)>
+    <!ELEMENT middle (#PCDATA)>
+    <!ELEMENT last (#PCDATA)>
+    <!ELEMENT phone (#PCDATA)>
+    <!ATTLIST phone type (work|home|personal) "personal">
+    <!ELEMENT area (#PCDATA)>
+    <!ELEMENT records (record+)>
+    <!ELEMENT record (product, quantity, price, date)>
+    <!ELEMENT product (sku, product_name)>
+    <!ATTLIST product productid CDATA #REQUIRED>
+    <!ELEMENT sku (#PCDATA)>
+    <!ELEMENT product_name (#PCDATA)>
+    <!ELEMENT quantity (#PCDATA)>
+    <!ELEMENT price (#PCDATA)>
+    <!ATTLIST price currency (npr|inr|usd) "npr">
+    <!ELEMENT date (#PCDATA)>
+    <!ATTLIST date type (ad|bs) #REQUIRED>
+]>
+<sales xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Q17.xsd">
+    <salesman>
+        <name title="Mr.">
+            <first>Anish</first>
+            <last>Gautam</last>
+        </name>
+        <phone type="personal">9841000000</phone>
+        <area>Kathmandu</area>
+        <records>
+            <record>
+                <product productid="P101">
+                    <sku>LAP-X1-2024</sku>
+                    <product_name>Gaming Laptop X1</product_name>
+                </product>
+                <quantity>2</quantity>
+                <price currency="npr">150000</price>
+                <date type="ad">2024-03-25</date>
+            </record>
+            <record>
+                <product productid="P202">
+                    <sku>WCH-SER7</sku>
+                    <product_name>Smart Watch Series 7</product_name>
+                </product>
+                <quantity>5</quantity>
+                <price currency="usd">299</price>
+                <date type="bs">2080-12-12</date>
+            </record>
+        </records>
+    </salesman>
+    
+    <salesman>
+        <name title="Mr.">
+            <first>Aayush</first>
+            <middle>Pratab</middle>
+            <last>Gyawali</last>
+        </name>
+        <phone type="work">01-4444444</phone>
+        <area>Butwal</area>
+        <records>
+            <record>
+                <product productid="P303">
+                    <sku>MSE-WR-20</sku>
+                    <product_name>Wireless Mouse WR20</product_name>
+                </product>
+                <quantity>10</quantity>
+                <price currency="inr">1200</price>
+                <date type="ad">2023-11-10</date>
+            </record>
+        </records>
+    </salesman>
+</sales>

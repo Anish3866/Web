@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<movies xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Q7.xsd">
+    <Movie id="M3866">
+        <title>The Shawshank Redemption</title>
+        <year>1994</year>
+        <_director name="Frank Darabont">Darabont</_director>
+        <comment lang="en">One of the greatest films ever made.</comment>
+        <newcomment>A masterpiece of storytelling and emotion.</newcomment>
+    </Movie>
+    <Movie id="M3867">
+        <title>Inception</title>
+        <year>2010</year>
+        <_director name="Christopher Nolan">Nolan</_director>
+        <comment lang="en">Extremely complex and visually stunning.</comment>
+    </Movie>
+    <Movie id="M3868">
+        <title>The Godfather</title>
+        <year>1972</year>
+        <_director name="Francis Ford Coppola">Coppola</_director>
+        <newcomment>The definitive crime drama.</newcomment>
+        <newcomment>Essential viewing for any movie buff.</newcomment>
+    </Movie>
+</movies>
